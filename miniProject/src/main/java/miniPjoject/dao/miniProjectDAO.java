@@ -13,4 +13,10 @@ public interface miniProjectDAO {
 	public List<miniProjectlist> menu(String restaurant);
 	
 	public int update(String category, String restaurant, String menu);
+	
+	public List<miniProjectlist> getPolls(String category, String restaurant, String menu);
+	
+	public List<miniProjectlist> getspecification(String category, String restaurant, String menu);
+	
+	public miniProjectlist getPollsCount(String category, String restaurant, String menu);
 }

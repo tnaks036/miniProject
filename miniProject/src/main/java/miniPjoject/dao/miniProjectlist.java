@@ -9,7 +9,8 @@ public class miniProjectlist {
 	private Long polls;
 	private String specification;
 	private Long no;
-	
+	private Long count;
+	private String address;
 	
 
 
@@ -154,6 +155,44 @@ public class miniProjectlist {
 		this.no = no;
 	}
 
+	
+	
+
+
+
+
+
+	public Long getCount() {
+		return count;
+	}
+
+
+
+
+
+
+	public void setCount(Long count) {
+		this.count = count;
+	}
+
+
+
+
+
+
+	public String getAddress() {
+		return address;
+	}
+
+
+
+
+
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 
 
 
@@ -163,8 +202,14 @@ public class miniProjectlist {
 	public String toString() {
 		return "miniProjectlist [restaurant=" + restaurant + ", category=" + category + ", menu=" + menu + ", price="
 				+ price + ", reviews=" + reviews + ", polls=" + polls + ", specification=" + specification + ", no="
-				+ no + "]";
+				+ no + ", count=" + count + ", address=" + address + "]";
 	}
+
+
+
+
+
+
 
 
 

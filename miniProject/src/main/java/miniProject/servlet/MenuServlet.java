@@ -30,10 +30,20 @@ public class MenuServlet extends HttpServlet {
 		if("next".equals(select)) {
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/views/selectlist/result.jsp");
 			miniProjectDAO dao = new miniProjectDAOimply();		
-			dao.update(category, restaurant, menu);
 			
+			dao.update(category, restaurant, menu);
 			List<miniProjectlist> list = dao.getList(restaurant);
 			req.setAttribute("list", list);
+			
+			miniProjectlist summary = dao.getPollsCount(category, restaurant, menu);
+			req.setAttribute("summary", summary);
+//			List<miniProjectlist> countOfPolls = dao.getPolls(category, restaurant, menu);
+//			req.setAttribute("countOfPolls", countOfPolls);
+//			
+//			List<miniProjectlist> specification = dao.getspecification(category,restaurant, menu);
+//			req.setAttribute("specification", specification);
+			
+			
 			
 
 			rd.forward(req, resp);
